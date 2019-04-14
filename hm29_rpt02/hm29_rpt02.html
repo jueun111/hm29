@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8">
+    <title>hm29 : christmas card</title>
+    <style>
+        #hm29 {
+            position: relative;
+            top: 280px;
+            left:200px; 
+            width: 100px;
+            padding: 5px;
+            background: yellow;
+            color: black;
+        }
+
+        @keyframes starAnimation {
+            0% {
+                color: yellow
+            }
+
+            50% {
+                color: orange
+            }
+
+            100% {
+                color: yellow
+            }
+        }
+
+        @keyframes ballAnimation {
+            0% {
+                color: red
+            }
+
+            20% {
+                color: orange
+            }
+
+            40% {
+                color: yellowgreen
+            }
+
+            60% {
+                color: green
+            }
+
+            80% {
+                color: blue
+            }
+
+            100% {
+                color: darkviolet
+            }
+
+        }
+
+
+        span {
+            font-size: 4.5em;
+            animation-name: starAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+
+        }
+
+
+
+        }
+
+        #fixed1 {
+            position: fixed;
+            bottom: 10px;
+            right: 20 width: 100px;
+            padding: 5px;
+            background: lightyellow;
+            color: black;
+        }
+
+        div {
+            display: inline-block;
+            position: absolute;
+            border: 1px solid lightgray;
+        }
+
+        div>p {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: x;
+            width: 15px;
+            font-size: 1.5em;
+            animation-name: ballAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            background: darkviolet;
+
+        }
+
+        div>p1 {
+            display: inline-block;
+            /* div의 자식 p */
+            position: absolute;
+            /* 절대 배치 */
+            height: x;
+            width: 15px;
+
+        }
+        
+        img{position:absolute}
+        audio{position:absolute}
+
+    </style>
+    <script></script>
+</head>
+
+<body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>Merry Christmas!</h3>
+    <hr>
+    <div>
+        <img src="media/border3.jpg" width="320" height="400" alt="테두리">
+    </div>
+   
+    <div>
+        <img src="media/christmastree.png" width="300" height="300"  alt="크리스마스 트리">
+        <p1 style="left:114px; top:-30px"><span>★</span></p1>
+        <p style="left:170px; top:130px">X</p>
+        <p style="left:150px; top:150px">-</p>
+        <p style="left:130px; top:170px">M</p>
+        <p style="left:150px; top:190px">A</p>
+        <p style="left:170px; top:210px">S</p>
+        <p style="left:110px; top:30px">M</p>
+        <p style="left:130px; top:50px">E</p>
+        <p style="left:150px; top:70px">R</p>
+        <p style="left:170px; top:90px">R</p>
+        <p style="left:190px; top:110px">Y</p>
+        <img src="media/bell.png" style="left:115px; top:26px">
+        <audio src="media/carrol.mp3" controls autoplay loop style="left:10px; top:320px"></audio>
+
+        <div id="hm29"> hm29  정주은
+            </div>
+    </div>
+
+
+
+
+
+
+</body></html>
