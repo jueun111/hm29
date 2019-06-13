@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+
+<head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8">
+    <title>hm29 : Semantic tag and form</title>
+    <style>
+        span {
+            color: white
+        }
+    </style>
+    <script>
+        var files = ["media/1.png",
+            "media/2.png",
+            "media/3.png",
+            "media/.png"
+
+        ];
+        var imgs = new Array();
+        for (var i = 0; i < files.length; i++) {
+            imgs[i] = new Image(); // 메모리에 이미지 객체 생성
+            imgs[i].src = files[i]; // 이미지 로딩
+        }
+        // 다음 이미지 출력
+        var next = 1;
+
+        function change(img) {
+            img.src = imgs[next].src; // 이미지 변경
+            next++; // 다음 이미지
+            next %= imgs.length; // 개수를 넘으면 처음으로
+        }
+
+
+        function change1() {
+            var spanArray = document.getElementsByTagName("span");
+            for (var i = 0; i < spanArray.length; i++) {
+                var span = spanArray[i];
+                span.style.color = "blue";
+                span.style.fontSize = "20px";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h2><a href="https://ko.wikipedia.org/wiki/엘비스_프레슬리"> Who is Jueun?</a></h2>
+
+    <hr>
+    <button onclick="change1()">제가 궁금하다면 누르세요</button>
+
+    <ul>
+        <li>이름:<span>정주은</span></li>
+        <li>나이:<span>22살</span></li>
+        <li>취미:<span>인터넷 쇼핑하기,유튜브 보기</span></li>
+        <li>좋아하는 음식:<span color="white">떡볶이,칼국수,수제비,초코송이</span></li>
+    </ul>
+    <img style="border:1px ridge wheat" src="media/1.png" alt="." width="200" height="200" onclick="change(this)">
+
+
+</body></html>
